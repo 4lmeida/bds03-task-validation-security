@@ -6,18 +6,18 @@ import java.util.List;
 
 public class ValidationError extends StandardError implements Serializable {
 
-    private List<FieldMessage> messageList  = new ArrayList<>();
+    private List<FieldMessage> errors  = new ArrayList<>();
 
     public ValidationError() {
         super();
     }
 
     public List<FieldMessage> getMessageList() {
-        return messageList;
+        return errors;
     }
 
-    public void addMessage(String fieldName, String fieldMessage) {
-        messageList.add(new FieldMessage(fieldName, fieldMessage));
+    public void addMessage(String fieldName, String message) {
+        errors.add(new FieldMessage(fieldName, message));
     }
 
 }

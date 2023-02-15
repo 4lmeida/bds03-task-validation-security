@@ -4,30 +4,30 @@ import java.io.Serializable;
 
 public class FieldMessage implements Serializable {
 
-    private String FiledName;
-    private String FieldMessage;
+    private String fieldName;
+    private String message;
 
     public FieldMessage() {
     }
 
-    public FieldMessage(String filedName, String fieldMessage) {
-        FiledName = filedName;
-        FieldMessage = fieldMessage;
+    public FieldMessage(String fieldName, String message) {
+        this.fieldName = fieldName;
+        this.message = message;
     }
 
-    public String getFiledName() {
-        return FiledName;
+    public String getFieldName() {
+        return fieldName;
     }
 
-    public void setFiledName(String filedName) {
-        FiledName = filedName;
+    public void setFieldName(String filedName) {
+        this.fieldName = fieldName;
     }
 
     public String getFieldMessage() {
-        return FieldMessage;
+        return message;
     }
 
-    public void setFieldMessage(String fieldMessage) {
-        FieldMessage = fieldMessage;
+    public void setFieldMessage(String message) {
+        this.message = message;
     }
 }
