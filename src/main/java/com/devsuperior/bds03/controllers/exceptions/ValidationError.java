@@ -1,23 +1,21 @@
 package com.devsuperior.bds03.controllers.exceptions;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ValidationError extends StandardError implements Serializable {
+public class ValidationError extends StandardError{
 
-    private List<FieldMessage> errors  = new ArrayList<>();
+    private List<FieldMessage> errors = new ArrayList<>();
 
     public ValidationError() {
         super();
     }
 
-    public List<FieldMessage> getMessageList() {
+    public List<FieldMessage> getErrors() {
         return errors;
     }
 
-    public void addMessage(String fieldName, String message) {
-        errors.add(new FieldMessage(fieldName, message));
+    public void addErrors(String fieldName, String massage) {
+        errors.add(new FieldMessage(fieldName, massage));
     }
-
 }

@@ -1,8 +1,6 @@
 package com.devsuperior.bds03.controllers.exceptions;
 
-import java.io.Serializable;
-
-public class FieldMessage implements Serializable {
+public class FieldMessage {
 
     private String fieldName;
     private String message;
@@ -19,15 +17,15 @@ public class FieldMessage implements Serializable {
         return fieldName;
     }
 
-    public void setFieldName(String filedName) {
+    public void setFieldName(String fieldName) {
         this.fieldName = fieldName;
     }
 
-    public String getFieldMessage() {
+    public String getMessage() {
         return message;
     }
 
-    public void setFieldMessage(String message) {
+    public void setMessage(String message) {
         this.message = message;
     }
 }
